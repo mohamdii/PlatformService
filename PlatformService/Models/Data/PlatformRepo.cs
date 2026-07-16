@@ -10,11 +10,7 @@
         }
         public void CreatePlatform(Platform plat)
         {
-            if (plat == null)
-            {
-                throw new ArgumentNullException(nameof(plat));
-            }
-            SaveChanges();
+            _context.Platforms.Add(plat);
         }
 
         public IEnumerable<Platform> GetAllPlatforms()
