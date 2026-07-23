@@ -2,10 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: platforms-depl
-  namespace: platforms
-  labels:
-    app: platforms
-
 spec:
   replicas: 1
   selector:
@@ -15,7 +11,7 @@ spec:
     metadata:
       labels:
         app: platformservice
-  spec:
-    containers:
-      - name: platformservice
-        image: mohamdii/platformservice:latest
+    spec:
+      containers:
+        - name: platformservice
+          image: mohamdii/platformservice:latest
