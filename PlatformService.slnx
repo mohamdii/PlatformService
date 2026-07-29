@@ -5,5 +5,5 @@
     <File Path="platforms-depl.yaml" />
     <File Path="platforms-np-srv.yaml" />
   </Folder>
-  <Project Path="../../../../../../source/repos/PlatformService/PlatformService/PlatformService.csproj" />
+  <Project Path="PlatformService/PlatformService.csproj" />
 </Solution>

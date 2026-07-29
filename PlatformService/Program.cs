@@ -13,7 +13,10 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddHttpClient<ICommandDataClient, CommandDataClient>();
+builder.Services.AddHttpClient<ICommandDataClient, CommandDataClient>(client =>
+{
+    Console.WriteLine(client.BaseAddress);
+});
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
