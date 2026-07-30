@@ -21,7 +21,7 @@ public class CommandDataClient : ICommandDataClient
             Encoding.UTF8,
             "application/json"
         );
-        var response = await _httpClient.PostAsync("http://localhost:5216/api/c/platforms", httpContent);
+        var response = await _httpClient.PostAsync($"{_configuration["CommandServiceUrl"]}", httpContent);
 
         if (response.IsSuccessStatusCode)
         {
