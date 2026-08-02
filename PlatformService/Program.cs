@@ -26,7 +26,6 @@ if (app.Environment.IsDevelopment())
 PrepDb.PrepPopulation(app, app.Environment.IsProduction());
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();

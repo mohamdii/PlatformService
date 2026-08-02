@@ -55,6 +55,7 @@ public class PlatformsController : ControllerBase
         {
             Console.WriteLine("Could not send to Command Service: {0}", ex.Message);
         }
+
         return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Id }, platformReadDto);
     }
 

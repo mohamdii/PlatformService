@@ -21,7 +21,8 @@ public class CommandDataClient : ICommandDataClient
             Encoding.UTF8,
             "application/json"
         );
-        var response = await _httpClient.PostAsync($"{_configuration["CommandServiceUrl"]}", httpContent);
+        Console.WriteLine(_configuration["CommandService"]);
+        var response = await _httpClient.PostAsync("http://commands-clusterip-srv:8080/api/c/platforms", httpContent);
 
         if (response.IsSuccessStatusCode)
         {
